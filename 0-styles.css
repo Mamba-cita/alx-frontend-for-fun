@@ -1,29 +1,49 @@
-ul li {
-  display: inline-block;
-  width: 22%;
-  height: 450px;
-  margin: 0 20px;
-  padding-top: 20px;
-  border: 1px solid grey;
-  border-radius: 8px;
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
-  background-color: #f2f2f2;
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100vh;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+ul {
+    display: grid;
+    place-items: center;
+    list-style: none;
+    height: 100vh;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+li {
+    border: 2.5px solid #727272;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    width: 300px;
+    height: 550px;
+    display: grid;
+    place-items: center;
+    grid-template-rows: 1fr 2.5fr;
 }
 
 span {
-  display: block;
-  background-image: url('./sprite.png');
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 92%;
+    height:  100%;
+    width: 220px;
+    padding: 50px;
 }
 
-.i-css {
-  background-position: 50% 0;
+span.i-html {
+    background: url('0-sprite.png') no-repeat -30px -40px;
 }
 
-.i-js {
-  background-position: 100% 0;
+span.i-css {
+    background: url('0-sprite.png') no-repeat -320px -40px;
+}
+
+span.i-js {
+    background: url('0-sprite.png') no-repeat -610px -40px;
 }
